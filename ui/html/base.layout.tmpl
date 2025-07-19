@@ -9,16 +9,18 @@
 type='image/x-icon'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?
 family=Ubuntu+Mono:400,700'>
-</head><body>
-<header>
-<h1><a href='/'>Snippetbox</a></h1>
+</head>
+<body>
+<header><h1><a href='/'>Snippetbox</a></h1>
 </header>
 <nav>
 <a href='/'>Home</a>
-<!-- Add a link to the new form -->
 <a href='/snippet/create'>Create snippet</a>
 </nav>
 <section>
+{{with .Flash}}
+<div class='flash '>{{.}}</div>
+{{end}}
 {{template "body" .}}
 </section>
 {{template "footer" .}}
